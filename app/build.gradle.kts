@@ -50,5 +50,6 @@ dependencies {
 
     implementation ("com.google.firebase:firebase-auth:22.3.0")
  implementation ("com.google.android.material:material:1.11.0")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
 }

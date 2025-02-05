@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MindSpring"
         tools:targetApi="31">
         <activity
+            android:name=".student.StudyActivity"
+            android:exported="false" />
+        <activity
             android:name=".admin.admindashboard"
             android:exported="false" />
         <activity
