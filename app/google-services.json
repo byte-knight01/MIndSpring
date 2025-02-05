@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943837341639",
+    "project_id": "mindspring-b4c80",
+    "storage_bucket": "mindspring-b4c80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943837341639:android:74060d2adc6f7549c49be2",
+        "android_client_info": {
+          "package_name": "com.sumit.mindspring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLgXQxjPk3o-29SFOQyJpbg8x3YV_jdJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
