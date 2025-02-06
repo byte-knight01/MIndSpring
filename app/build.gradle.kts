@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.sumit.mindspring"
         minSdk = 28
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -51,5 +51,14 @@ dependencies {
     implementation ("com.google.firebase:firebase-auth:22.3.0")
  implementation ("com.google.android.material:material:1.11.0")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    // Firebase Storage
+    implementation ("com.google.firebase:firebase-storage:20.3.0")
+
+    // PDF viewer
+//    implementation ("com.github.barteksc:android-pdf-viewer:3.1.0-beta.1")
+
+    // RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 
 }

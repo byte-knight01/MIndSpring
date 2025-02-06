@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.sumit.mindspring" />
+                  <option name="mobileSdkAppId" value="1:943837341639:android:74060d2adc6f7549c49be2" />
+                  <option name="projectId" value="mindspring-b4c80" />
+                  <option name="projectNumber" value="943837341639" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
