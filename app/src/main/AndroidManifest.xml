@@ -15,49 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MindSpring"
-        tools:targetApi="31">
-        <activity
-            android:name=".student.StudyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".admin.admindashboard"
-            android:exported="false" />
-        <activity
-            android:name=".teacher.teacherdashboard"
-            android:exported="false" />
-        <activity
-            android:name=".student.studentdashboard"
-            android:exported="false" />
-        <activity
-            android:name=".teacher.teacherlogin"
-            android:exported="false" />
-        <activity
-            android:name=".student.studentlogin"
-            android:exported="false" />
-        <activity
-            android:name=".admin.adminlogin"
-            android:exported="false" />
-        <activity
-            android:name=".select"
-            android:exported="false" />
-        <activity
-            android:name=".get_started"
-            android:exported="false" />
-        <activity
-            android:name=".Splashscreen"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        tools:targetApi="31"
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 
+<!--pdf viewre activity-->
         <activity
-            android:name=".student.FilesActivity"
-            android:exported="false" />
-
-        <!-- FileProvider configuration -->
+            android:name=".student.PDFViewerActivity"
+            android:exported="false"
+            />
+<!--    file provider    -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -67,9 +35,57 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+<!--        Study activity-->
+        <activity
+            android:name=".student.StudyActivity"
+            android:exported="false" />
+<!--        admin dashboard activity-->
+        <activity
+            android:name=".admin.admindashboard"
+            android:exported="false" />
+<!--        teacher dashboard activity-->
+        <activity
+            android:name=".teacher.teacherdashboard"
+            android:exported="false" />
+<!--        student dashboard activity-->
+        <activity
+            android:name=".student.studentdashboard"
+            android:exported="false" />
+<!--        teacher login activity-->
+        <activity
+            android:name=".teacher.teacherlogin"
+            android:exported="false" />
+<!--        student login activity-->
+        <activity
+            android:name=".student.studentlogin"
+            android:exported="false" />
+<!--        admin login activity-->
+        <activity
+            android:name=".admin.adminlogin"
+            android:exported="false" />
+<!--        select activity-->
+        <activity
+            android:name=".select"
+            android:exported="false" />
+<!--        get started activity-->
+        <activity
+            android:name=".get_started"
+            android:exported="false" />
+<!--        splash screen activity-->
+        <activity
+            android:name=".Splashscreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--        files activity-->
+        <activity
+            android:name=".student.FilesActivity"
+            android:exported="false" /> <!-- FileProvider configuration -->
 
     </application>
-
-
 
 </manifest>

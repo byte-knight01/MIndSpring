@@ -17,6 +17,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io")
+            maven { url = uri("https://jcenter.bintray.com") }  // Add this
+//            maven { url = uri("https://jitpack.io") }  // Make sure this exists
     }
 }
 

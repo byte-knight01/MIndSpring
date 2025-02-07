@@ -218,23 +218,31 @@ public class FilesActivity extends AppCompatActivity {
                 });
     }
 
+//     opening a system default pdf viewer
+//    private void handleFileClick(StorageFile file) {
+//        progressBar.setVisibility(View.VISIBLE);
+//
+//        // Create a temporary file in cache directory
+//        File localFile = new File(getCacheDir(), file.getName());
+//        StorageReference fileRef = storage.getReference(file.getPath());
+//
+//        fileRef.getFile(localFile)
+//                .addOnSuccessListener(taskSnapshot -> {
+//                    progressBar.setVisibility(View.GONE);
+//                    openPDFFile(localFile);
+//                })
+//                .addOnFailureListener(e -> {
+//                    progressBar.setVisibility(View.GONE);
+//                    Toast.makeText(this, "Error downloading file: " + e.getMessage(),
+//                            Toast.LENGTH_SHORT).show();
+//                });
+//    }
+
+//    opening a new pdfviewer activity
     private void handleFileClick(StorageFile file) {
-        progressBar.setVisibility(View.VISIBLE);
-
-        // Create a temporary file in cache directory
-        File localFile = new File(getCacheDir(), file.getName());
-        StorageReference fileRef = storage.getReference(file.getPath());
-
-        fileRef.getFile(localFile)
-                .addOnSuccessListener(taskSnapshot -> {
-                    progressBar.setVisibility(View.GONE);
-                    openPDFFile(localFile);
-                })
-                .addOnFailureListener(e -> {
-                    progressBar.setVisibility(View.GONE);
-                    Toast.makeText(this, "Error downloading file: " + e.getMessage(),
-                            Toast.LENGTH_SHORT).show();
-                });
+        Intent intent = new Intent(this, PDFViewerActivity.class);
+        intent.putExtra("FILE_PATH", file.getPath());
+        startActivity(intent);
     }
 
     private void openPDFFile(File file) {
