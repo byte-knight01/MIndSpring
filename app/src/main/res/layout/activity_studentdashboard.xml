@@ -38,6 +38,7 @@
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
 
+
             <ImageView
                 android:id="@+id/searchIcon"
                 android:layout_width="24dp"
@@ -51,6 +52,16 @@
                 android:layout_height="24dp"
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_notification" />
+            <ImageButton
+                android:id="@+id/logoutButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="Logout" />
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 

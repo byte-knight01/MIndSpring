@@ -1,20 +1,24 @@
 package com.sumit.mindspring.student;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.sumit.mindspring.R;
+import com.sumit.mindspring.select;
 
 public class studentdashboard extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private CardView homeworkCard, doubtsCard, resultCard, analysisCard;
-    private ImageView searchIcon, notificationIcon;
+    private ImageView searchIcon, notificationIcon, logoutButton;
     private BottomNavigationView bottomNav;
 
     @Override
@@ -46,10 +50,13 @@ public class studentdashboard extends AppCompatActivity implements BottomNavigat
 
         // Bottom navigation
         bottomNav = findViewById(R.id.bottomNav);
+
+        logoutButton = findViewById(R.id.logoutButton);
     }
 
     private void setupClickListeners() {
         // Card click listeners
+        logoutButton.setOnClickListener(v -> showLogoutConfirmationDialog());
         homeworkCard.setOnClickListener(v ->
                 showUpdateToast("Homework feature"));
 
@@ -76,6 +83,41 @@ public class studentdashboard extends AppCompatActivity implements BottomNavigat
                 Toast.LENGTH_SHORT).show();
     }
 
+    private void showLogoutConfirmationDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to logout?")
+                .setPositiveButton("Yes", (dialog, which) -> performLogout())
+                .setNegativeButton("No", null)
+                .show();
+    }
+
+//    private void performLogout() {
+//        // Clear user session (assuming you're using SharedPreferences)
+//        SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+//        preferences.edit().clear().apply();
+//
+//        // Navigate to login screen
+//        Intent intent = new Intent(this, select.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//        startActivity(intent);
+//        finish();
+//    }
+
+    private void performLogout() {
+        // Sign out from Firebase
+        FirebaseAuth.getInstance().signOut();
+
+        // Clear any local preferences if needed
+        SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        preferences.edit().clear().apply();
+
+        // Navigate to select activity
+        Intent intent = new Intent(this, select.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
