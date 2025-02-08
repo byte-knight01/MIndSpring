@@ -80,7 +80,7 @@ import com.sumit.mindspring.R;
 
 public class StudyActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private MaterialCardView ncertCard, formulaCard, pyqCard;
+    private MaterialCardView ncertCard, formulaCard, pyqCard, jeeMainsPyqCard, jeeAdvancedPyqCard, neetPyqCard;
     private BottomNavigationView bottomNav;
     private ImageButton backButton;
 
@@ -103,6 +103,9 @@ public class StudyActivity extends AppCompatActivity implements BottomNavigation
         pyqCard = findViewById(R.id.pyqCard);
         bottomNav = findViewById(R.id.bottomNav);
         backButton = findViewById(R.id.backButton);
+        jeeMainsPyqCard = findViewById(R.id.jeeMainsPyqCard);
+        jeeAdvancedPyqCard = findViewById(R.id.jeeAdvancedPyqCard);
+        neetPyqCard = findViewById(R.id.neetPyqCard);
     }
 
     private void setupClickListeners() {
@@ -111,6 +114,9 @@ public class StudyActivity extends AppCompatActivity implements BottomNavigation
         ncertCard.setOnClickListener(v -> openFilesActivity("NCERT"));
         formulaCard.setOnClickListener(v -> openFilesActivity("Formula_sheets"));
         pyqCard.setOnClickListener(v -> openFilesActivity("PYQ"));
+        jeeMainsPyqCard.setOnClickListener(v -> openFilesActivity("JEE_Mains_PYQ"));
+        jeeAdvancedPyqCard.setOnClickListener(v -> openFilesActivity("JEE_Advanced_PYQ"));
+        neetPyqCard.setOnClickListener(v -> openFilesActivity("NEET_PYQ"));
     }
 
     private void openFilesActivity(String section) {

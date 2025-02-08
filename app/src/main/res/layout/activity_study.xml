@@ -58,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="NCERT"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Formula sheets"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -120,7 +120,100 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="PYQ"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- JEE Mains PYQ Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/jeeMainsPyqCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="JEE Mains PYQ"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- JEE Advanced PYQ Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/jeeAdvancedPyqCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="JEE Advanced PYQ"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- NEET PYQ Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/neetPyqCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="NEET PYQ"
+                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
