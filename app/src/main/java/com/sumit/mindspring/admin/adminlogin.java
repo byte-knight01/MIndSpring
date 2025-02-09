@@ -1,9 +1,7 @@
 package com.sumit.mindspring.admin;
 
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +10,6 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.sumit.mindspring.R;
-import com.sumit.mindspring.student.studentdashboard;
 
 public class adminlogin extends AppCompatActivity {
     private TextInputLayout registrationIdLayout, passwordLayout;

@@ -47,29 +47,6 @@ public class select extends AppCompatActivity {
             }
         });
 
-        // Teacher button click listener
-//        teacherButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.setClassName(getPackageName(),
-//                        getPackageName() + ".teacher.teacherlogin");
-//                startActivity(intent);
-//            }
-//        });
-
-        // Admin button click listener
-//        adminButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.setClassName(getPackageName(),
-//                        getPackageName() + ".admin.adminlogin");
-//                startActivity(intent);
-//            }
-//        });
-//    }
-
         adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,11 +61,4 @@ public class select extends AppCompatActivity {
             }
         });
 
-
-//        @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        // Add any additional logic here if needed
-//    }
-//}
     }}
