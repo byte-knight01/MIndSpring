@@ -2,15 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:windowBackground">
+    android:layout_height="match_parent">
 
     <!-- Top Bar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?android:windowBackground"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
@@ -62,7 +60,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -77,7 +74,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="NCERT"
-                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -93,7 +89,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -108,7 +103,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Formula sheets"
-                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -124,7 +118,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -139,7 +132,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="PYQ"
-                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -155,7 +147,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -170,7 +161,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="JEE Mains PYQ"
-                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -186,7 +176,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -201,7 +190,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="JEE Advanced PYQ"
-                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -217,7 +205,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -232,7 +219,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="NEET PYQ"
-                        android:textColor="@color/primary_text"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -249,7 +235,6 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:windowBackground"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemTextColor="@color/bottom_nav_color"
         app:layout_constraintBottom_toBottomOf="parent"
