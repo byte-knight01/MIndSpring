@@ -41,11 +41,12 @@ dependencies {
 //    implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
     implementation("com.google.firebase:firebase-analytics")
 
 //    implementation ("com.google.firebase:firebase-auth:22.3.0")
@@ -63,6 +64,8 @@ dependencies {
 //    implementation ("com.github.barteksc:android-pdf-viewer:3.1.0-beta.1")
     implementation ("com.github.mhiew:android-pdf-viewer:3.2.0-beta.1")
 
+//added after admin dashboard crash
+//    implementation ("com.google.android.gms:play-services:17.0.0")
 
     // RecyclerView
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
@@ -70,4 +73,7 @@ dependencies {
 //    implementation ('com.google.android.material:material:1.5.0')
 //    implementation ('de.hdodenhof:circleimageview:3.1.0')
 
+
+    implementation ("com.google.android.gms:play-services-base:18.2.0")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
 }

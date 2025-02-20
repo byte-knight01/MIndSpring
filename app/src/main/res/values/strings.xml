@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MindSpring</string>
+
+
+    <string-array name="user_filters">
+        <item>All Users</item>
+        <item>Students</item>
+        <item>Teachers</item>
+        <item>Admins</item>
+    </string-array>
+
 </resources>

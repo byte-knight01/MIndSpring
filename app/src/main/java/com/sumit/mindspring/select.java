@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.sumit.mindspring.admin.adminlogin;
+import com.sumit.mindspring.teacher.teacherlogin;
+
 public class select extends AppCompatActivity {
 
     private ImageButton backButton;
@@ -50,15 +53,44 @@ public class select extends AppCompatActivity {
         adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Please contact administrator", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(select.this, adminlogin.class));
+//                Toast.makeText(v.getContext(), "Please contact administrator", Toast.LENGTH_SHORT).show();
             }
         });
 
         teacherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Please contact administrator", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(select.this, teacherlogin.class));
+//
+//                Toast.makeText(v.getContext(), "Please contact administrator", Toast.LENGTH_SHORT).show();
             }
         });
 
     }}
+
+//public class select extends AppCompatActivity {
+//    private CardView adminCard, teacherCard, studentCard;
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_select);
+//
+//        adminCard = findViewById(R.id.adminCard);
+//        teacherCard = findViewById(R.id.teacherCard);
+//        studentCard = findViewById(R.id.studentCard);
+//
+//        adminCard.setOnClickListener(v -> {
+//            startActivity(new Intent(select.this, adminlogin.class));
+//        });
+//
+//        teacherCard.setOnClickListener(v -> {
+//            startActivity(new Intent(select.this, teacherlogin.class));
+//        });
+//
+//        studentCard.setOnClickListener(v -> {
+//            startActivity(new Intent(select.this, studentlogin.class));
+//        });
+//    }
+//}
